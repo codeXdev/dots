@@ -66,3 +66,6 @@ let g:vim_bootstrap_editor = "vim"				" nvim or vim
 "------------------Mappings-------------------"
 "Ctrl+Enter to maximize gVim
 "map <c-enter> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+
+
+"Adding test comment
