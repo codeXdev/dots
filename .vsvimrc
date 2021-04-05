@@ -1,0 +1,64 @@
+"set nocompatible              " be iMproved, require
+
+
+"---------------------- Editor Configuration -------------------------"
+set number 
+"set encoding=utf-8      "Encode in utf-8
+"set fileencoding=utf-8
+"set fileencodings=utf-8
+set backspace=indent,eol,start
+"set linespace=0
+set visualbell
+"set noerrorbells visualbell t_vb=
+"set ttyfast
+
+
+"" Map leader to ,
+let mapleader=','
+
+
+
+"---------------Visuals--------------"
+"syntax enable 
+
+
+
+
+"--------------- Searching --------------"
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+
+
+
+"--------------- Editor Shortcuts --------------"
+"" no one is really happy until you have this shortcuts
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
+
+
+
+
+"-------------Mappings------------"
+"Add simple highlight removal
+nmap <Leader><space> :nohlsearch<cr>
+
+
+"" Vim jk keys for <Esc>
+inoremap jk <Esc>
+
+
+"" Split
+noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>v :<C-u>vsplit<CR>
