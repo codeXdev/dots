@@ -1,6 +1,6 @@
 
 "------------------Gui-Visuals----------------
-set guifont=Fira\ Mono\ for\ Powerline\ 15
+set guifont=CascadiaCode_Nerd_Font:h11
 
 "colorscheme gruvbox 
 
