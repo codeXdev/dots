@@ -81,8 +81,40 @@ Plug 'cseelus/vim-colors-lucid'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
+
+""""DotNet
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'yami-beta/asyncomplete-omni.vim'
+
 " Closing Plugin List
 call plug#end()
 
 " Required:
 filetype plugin indent on
+
+
+
+
+
+"----------------Registers------------------
+autocmd User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+            \ 'name': 'omni',
+            \ 'allowlist': ['*'],
+            \ 'blocklist': ['c', 'cpp', 'html'],
+            \ 'completor': function('asyncomplete#sources#omni#completor'),
+            \ 'config': {
+            \   'show_source_kind': 1,
+            \ },
+            \ }))
+
+
+"----------------Mapping-------------------
+noremap <c-p> :GFiles<CR>
+noremap <F12> :OmniSharpGoToDefinition<CR>
+
+
+
+
+
+
