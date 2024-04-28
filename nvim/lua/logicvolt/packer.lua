@@ -20,8 +20,6 @@ return require('packer').startup(function(use)
 		  vim.cmd('colorscheme rose-pine')
 	  end
   })
-  
-  use({ 'tpope/vim-fugitive' })
 
   use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 
@@ -355,4 +353,7 @@ use {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
+  
+use({ 'tpope/vim-fugitive' })
+
 end)
