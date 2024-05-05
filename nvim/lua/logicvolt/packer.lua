@@ -349,11 +349,12 @@ use {
         {'L3MON4D3/LuaSnip'},
     }
 }
+
 use {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
-  
+
 use({ 'tpope/vim-fugitive' })
 
 end)
