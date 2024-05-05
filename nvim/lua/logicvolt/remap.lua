@@ -1,7 +1,5 @@
 vim.g.mapleader = ","
 
-
-
 --------------------------------Keybindings------------------------------
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = true })
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -30,6 +28,11 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':<C-u>split<CR>', { noremap = true })
 -- Split vertically
 vim.api.nvim_set_keymap('n', '<Leader>v', ':<C-u>vsplit<CR>', { noremap = true })
 
+vim.api.nvim_set_keymap('n', '<Leader>ev', ':tabedit ~/.config/nvim/init.lua<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>er', ':tabedit ~/.config/nvim/lua/logicvolt/remap.lua<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>ep', ':tabedit ~/.config/nvim/lua/logicvolt/packer.lua<CR>', { noremap = true })
+
+
 -- Tab Navigation
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
@@ -47,11 +50,12 @@ vim.keymap.set('n', '<Leader><space>', function()
     vim.cmd(':nohlsearch')
 end, { expr = true, replace_keycodes = true })
 
-vim.api.nvim_set_keymap('n', '<C-enter>', ':call GuiWindowFullScreen((g:GuiWindowFullScreen + 1) % 2)<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<M-enter>', ':call GuiWindowFullScreen((g:GuiWindowFullScreen + 1) % 2)<CR>', { noremap = true })
 
 ---------------------------------Commands mapping--------------------------
 vim.cmd("cnoreabbrev W! w!")
 vim.cmd("cnoreabbrev Q! q!")
+vim.cmd("cnoreabbrev Qa qa")
 vim.cmd("cnoreabbrev Qall! qall!")
 vim.cmd("cnoreabbrev Wq wq")
 vim.cmd("cnoreabbrev Wa wa")
