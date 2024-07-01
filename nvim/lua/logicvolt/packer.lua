@@ -117,14 +117,14 @@ return require('packer').startup(function(use)
                       git_status = {
                           symbols = {
                               -- Change type
-                              added     = "", -- or "✚", but this is redundant info if you use git_status_colors on the name
-                              modified  = "", -- or "", but this is redundant info if you use git_status_colors on the name
+                              added     = "✚", -- or "✚", but this is redundant info if you use git_status_colors on the name
+                              modified  = "", -- or "", but this is redundant info if you use git_status_colors on the name
                               deleted   = "✖",-- this can only be used in the git_status source
                               renamed   = "󰁕",-- this can only be used in the git_status source
                               -- Status type
                               untracked = "",
                               ignored   = "",
-                              unstaged  = "󰄱",
+                              unstaged  = "",
                               staged    = "",
                               conflict  = "",
                           }
@@ -162,8 +162,8 @@ return require('packer').startup(function(use)
                           nowait = true,
                       },
                       mappings = {
-                          ["<space>"] = { 
-                              "toggle_node", 
+                          ["<space>"] = {
+                              "toggle_node",
                               nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use 
                           },
                           ["<2-LeftMouse>"] = "open",
@@ -185,7 +185,7 @@ return require('packer').startup(function(use)
                           -- ['C'] = 'close_all_subnodes',
                           ["z"] = "close_all_nodes",
                           --["Z"] = "expand_all_nodes",
-                          ["a"] = { 
+                          ["a"] = {
                               "add",
                               -- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
                               -- some commands may take optional config options, see `:h neo-tree-mappings` for details
@@ -356,5 +356,11 @@ use {
 }
 
 use({ 'tpope/vim-fugitive' })
+
+use "mattn/emmet-vim"
+
+use "tpope/vim-commentary"
+
+use 'tpope/vim-surround'
 
 end)
