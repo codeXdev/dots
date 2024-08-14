@@ -18,6 +18,8 @@ vim.opt.expandtab = true
 vim.opt.hidden = true
 vim.opt.clipboard = "unnamed"
 vim.opt.linespace = 10
+vim.g.tex_conceal = "dmgs"
+vim.g.guifont = "RecMonoCasual Nerd Font Mono:h11" 
 
 -- Set file format to Unix-style
 vim.cmd('set ff=unix')
