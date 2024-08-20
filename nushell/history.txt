@@ -1,0 +1,175 @@
+clear
+exit
+clear
+exit
+clear
+config
+config nu
+clear
+cd .config
+govim
+q
+clear
+gvim
+cleawr
+clear
+cd .config
+qvim
+clear
+emqx start
+clear
+gvim
+clear
+exit
+govim
+clear
+goneovim
+clear
+go run cmd\smartlock-command
+go run ./cmd\smartlock-command
+clear
+clear
+go run ./cmd\smartlock-command
+clear
+goneovim
+go run ./cmd\smartlock-command
+clear
+cd ..
+ls
+clear
+cd ..
+ls
+clear
+cd ResearchAndDocuments\
+ls
+clear
+cd ..
+cd RnD\
+ls
+clear
+ls
+cd Dotnet\
+ls
+clear
+cd ..
+ls
+cd DotnetProjectExercise\
+clear
+gvim
+cd ..
+ls
+explorer .
+cd Dotnet
+ls
+clear
+dotnet new webapi -n DependencyInjectionTut
+clea
+clear
+cd DependencyInjectionTut\
+clear
+gvim
+cd ..
+rm -Force DependencyInjectionTut\
+rm -R DependencyInjectionTut\
+rm DependencyInjectionTut\
+rm DependencyInjectionTut --recursive
+dotnet new webapi -n DependencyInjectionTut --use-controllers
+cd DependencyInjectionTut\
+clear
+gvim
+clear
+cd D:\Codes\SurbanaJurong\SFM\
+clear
+ls
+clear
+ls
+cd SmartFMPortalService\
+clear
+fzf
+clear
+fzf
+clear
+cd D:\Codes\SurbanaJurong\SFM\SmartFMPortalService\
+clear
+(fzf *.sln)
+find
+SmartFMPortalService.sln
+clear
+start (fzf *sln)
+start SmartFMPortalService.sln
+open (fzf *.sln)
+open $(fzf *.sln)
+clear
+open (fzf *.sln)
+start (fzf *sln)
+start $(fzf *sln)
+rust
+clear
+cd Downloads
+clear
+cd Programs\
+clear
+ls
+rustup-init.exe --default-host
+clear
+rust
+rustc
+clear
+cd .cargo\
+ls
+clear
+touch .config
+vim .config
+rm .config
+ls
+clear
+touch config
+vim config
+clear
+touch test.rs
+vim test.rs
+rustc test.rs
+.\test.exe
+clearw
+clear
+rm test
+rm test.exe
+rm test.rs
+clear
+ls
+cd ..
+ng s -o
+clear
+cd D:/Codes/
+ls
+clear
+cd RnD\
+cleawr
+clear
+ls
+cd ProjectMarkOne\
+clear
+ls
+cd EmployeeService\
+cd ..
+cd ClientMarkOne\
+clear
+govim
+goneovim.exe 
+clear
+cd .config/nvim
+qvim
+clear
+goneovim.exe 
+winget search neovim
+winget update Neovim.Neovim -s winget
+clear
+neovim
+nvim
+clear
+nvim
+goneovim.exe 
+nvim
+nvim-qt
+goneovim.exe 
+nu config

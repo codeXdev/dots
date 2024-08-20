@@ -45,6 +45,12 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 
+
+
+vim.keymap.set("n", "<M-k>", ":bp")
+vim.keymap.set("n", "<M-j>", ":bn")
+
+
 --no highlight if leader and space after search
 vim.keymap.set('n', '<Leader><space>', function()
     vim.cmd(':nohlsearch')
