@@ -4,8 +4,8 @@ require("logicvolt")
 -- ~/.config/nvim/lua/options.lua
 vim.opt.number = true
 vim.opt.encoding = "utf-8"
-vim.opt.fileencoding = "utf-8"
-vim.opt.fileencodings = "utf-8"
+--vim.opt.fileencoding = "utf-8"
+--vim.opt.fileencodings = "utf-8"
 vim.opt.backspace = "indent,eol,start"
 vim.opt.linespace = 0
 vim.opt.visualbell = true
@@ -22,7 +22,7 @@ vim.opt.guifont = "RecMonoCasual_Nerd_Font:h11"
 vim.opt.linespace = 10
 
 -- Set file format to Unix-style
-vim.cmd('set ff=unix')
+--vim.cmd('set ff=unix')
 
 -- Enable syntax highlighting
 vim.cmd('syntax enable')

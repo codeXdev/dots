@@ -1,2 +1,2 @@
 require("logicvolt.remap")
-require("logicvolt.packer")
+require("logicvolt.lazy")
