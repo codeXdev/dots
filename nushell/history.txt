@@ -1,9 +1,0 @@
-clear
-exit
-nu config
-pwd
-clear
-exit
-clear
-exit
-clear

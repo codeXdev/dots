@@ -4,9 +4,6 @@ vim.g.mapleader = ","
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = true })
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- Map <leader>n to toggle_neotree function
-vim.api.nvim_set_keymap('n', '<leader>n', '<Cmd>Neotree toggle<CR><CR>', { noremap = true, silent = true })
-
 -- Navigate to previous buffer
 vim.api.nvim_set_keymap('n', '<C-;>', ':bp<CR>', { noremap = true })
 
@@ -49,9 +46,12 @@ end, { expr = true, replace_keycodes = true })
 
 
 
-vim.api.nvim_set_keymap('n', '<M-Enter>', ':call rpcnotify(0, "Gui", "fullscreen")<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<M-Enter>', '<Esc>:call rpcnotify(0, "Gui", "fullscreen")<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<M-Enter>', '<Esc>:call rpcnotify(0, "Gui", "fullscreen")<CR>gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<M-Enter>', ':call rpcnotify(0, "Gui", "fullscreen")<CR>',
+    { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<M-Enter>', '<Esc>:call rpcnotify(0, "Gui", "fullscreen")<CR>',
+    { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<M-Enter>', '<Esc>:call rpcnotify(0, "Gui", "fullscreen")<CR>gv',
+    { noremap = true, silent = true })
 
 
 
@@ -68,3 +68,16 @@ vim.cmd("cnoreabbrev WQ wq")
 vim.cmd("cnoreabbrev W w")
 vim.cmd("cnoreabbrev Q q")
 vim.cmd("cnoreabbrev Qall qall")
+
+
+
+
+---------------------------------Caps Lock mapping--------------------------
+-- Map Caps Lock to Escape only inside Neovim
+vim.keymap.set({ 'n', 'i', 'v' }, '<CapsLock>', '<Esc>')
+
+
+
+---------------------------------Plugin Based Mappings--------------------------
+-- Map <leader>n to toggle_neotree function
+vim.api.nvim_set_keymap('n', '<leader>n', '<Cmd>Neotree toggle<CR><CR>', { noremap = true, silent = true })

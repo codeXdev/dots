@@ -1,1 +1,0 @@
-$env.PROMPT_INDICATOR = " > "

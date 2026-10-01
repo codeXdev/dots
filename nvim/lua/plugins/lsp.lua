@@ -97,33 +97,38 @@ return {
             end,
         })
 
-        require('mason').setup({})
-        require('mason-lspconfig').setup({
-            ensure_installed = {
-                "lua_ls",
-                "ts_ls",
-                "eslint",
-                "angularls",
-                "omnisharp",
-            },
+        local on_attach = function(client, bufnr)
+            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {
+                buffer = bufnr,
+                desc = "LSP Code Action",
+            })
+        end
+
+        require("mason").setup({})
+        require("mason-lspconfig").setup({
+
             handlers = {
+                -- Default handler
                 function(server_name)
-                    if server_name == "luals" then return end -- avoid starting with {}
-                    require('lspconfig')[server_name].setup({})
+                    if server_name == "lua_ls" then
+                        return
+                    end
+                    require("lspconfig")[server_name].setup({
+                        on_attach = on_attach,
+                    })
                 end,
 
+                -- Lua LS custom config
                 lua_ls = function()
-                    require('lspconfig').luals.setup({
+                    require("lspconfig").lua_ls.setup({
+                        on_attach = on_attach,
                         settings = {
                             Lua = {
-                                runtime = {
-                                    version = 'LuaJIT',
-                                },
-                                diagnostics = {
-                                    globals = { 'vim' },
-                                },
+                                runtime = { version = "LuaJIT" },
+                                diagnostics = { globals = { "vim" } },
                                 workspace = {
-                                    library = { vim.env.VIMRUNTIME },
+                                    library = vim.api.nvim_get_runtime_file("", true),
+                                    checkThirdParty = false,
                                 },
                             },
                         },

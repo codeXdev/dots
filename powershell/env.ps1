@@ -1,4 +1,3 @@
-
 #npm cache
 $env:Path += ";C:\npm-cache\node-modules\"
 

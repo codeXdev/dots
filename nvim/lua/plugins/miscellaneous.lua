@@ -3,6 +3,9 @@ return {
         "tpope/vim-fugitive",
     },
     {
+        "tpope/vim-surround",
+    },
+    {
         "mattn/emmet-vim",
         init = function()
             -- Enable all functions in all modes
