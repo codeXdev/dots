@@ -9,7 +9,8 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "\uf310 @{{ .UserName }}",
+          //"template": "\uf310 @{{ .UserName }}",
+          "template": "\udb81\uddb3 @{{ .UserName }}",
           "foreground": "#98C379",
           "type": "text",
           "style": "plain"

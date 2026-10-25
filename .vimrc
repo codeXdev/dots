@@ -2,7 +2,7 @@
 set nocompatible              " be iMproved, require
 
 "----------------------Source Vundle plugins-------------------------"
-source ~\.plugins.vim
+source $XDG_CONFIG_HOME/.plugins.vim
 
 
 "---------------------- Editor Configuration -------------------------"
